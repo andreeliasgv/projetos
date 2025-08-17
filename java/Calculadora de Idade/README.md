@@ -92,8 +92,3 @@ Sugestão de mensagem de commit: `feat: adicionar calculadora de idade em Java (
 Este projeto pode ser licenciado sob **MIT License** — adicione um arquivo `LICENSE` se desejar.
 
 ---
-
-Se quiser, eu posso:
-- gerar uma versão refatorada do `Calcular_idade.java` usando `LocalDate` e `Period` para cálculo exato;
-- renomear a classe para `CalcularIdade` e atualizar o README e comandos de compilação automaticamente;
-- criar `LICENSE` e `.gitignore` prontos para o repositório.
