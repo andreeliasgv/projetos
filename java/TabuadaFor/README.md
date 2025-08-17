@@ -1,9 +1,9 @@
-````markdown
 # ✖️ Tabuada com Laço `for` em Java
 
 Este programa em Java solicita um número ao usuário
 e imprime a tabuada de 0 a 10 utilizando o laço de repetição `for`.
 
+````markdown
 ## 📌 Funcionalidades
 
 - Solicita ao usuário o número da tabuada desejada
@@ -17,11 +17,9 @@ for (c = 0; c <= 10; c++) {
     resultado = numero * c;
     System.out.println(numero + "x" + c + "=" + resultado);
 }
-````
 
 ## 🖥️ Exemplo de uso
 
-```
 INFORME O NUMERO DA TABUADA: 
 7
 7x0=0
@@ -35,29 +33,13 @@ INFORME O NUMERO DA TABUADA:
 7x8=56
 7x9=63
 7x10=70
-```
-
-## ▶️ Como executar
-
-1. Compile o código:
-
-   ```bash
-   javac TabuadaFor.java
-   ```
-
-2. Execute:
-
-   ```bash
-   java TabuadaFor
-   ```
-
-> ⚠️ É necessário ter o Java JDK instalado.
 
 ## 🧠 Observações
 
 * A tabuada é gerada de **0 até 10** inclusive.
 * O programa utiliza apenas variáveis e estruturas básicas, sendo ideal para iniciantes.
 
+````
 ## 📄 Licença
 
 Este projeto está sob a [Licença MIT](../LICENSE).
