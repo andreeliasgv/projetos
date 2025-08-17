@@ -34,6 +34,7 @@ A medida da area do terreno, em metros, e de: 250.000000
 * Pode ser facilmente adaptado para outros formatos geométricos.
 * Ideal para iniciantes que estão aprendendo **entrada de dados**, **variáveis**, **operações matemáticas** e **uso de `printf` e `scanf`**.
 
+````
 ## 📄 Licença
 
 Este projeto está sob a [Licença MIT](../LICENSE).
