@@ -42,6 +42,7 @@ Você é maior de idade.
 * Os meses e dias são **aproximados** (365 dias por ano, sem considerar anos bissextos ou meses com variações).
 * Ideal para iniciantes treinarem **entrada de dados**, **operações básicas** e **estrutura condicional `if/else`**.
 
+````
 ## 📄 Licença
 
 Este projeto está sob a [Licença MIT](../LICENSE).
