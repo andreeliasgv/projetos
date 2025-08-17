@@ -1,8 +1,7 @@
-```markdown
 # 🏡 Cálculo da Área de um Terreno em C
-
 Este programa em linguagem C solicita as medidas de frente
 e laterais de um terreno retangular e calcula sua área em metros quadrados.
+```markdown
 
 ## 📌 Funcionalidades
 
@@ -12,26 +11,22 @@ e laterais de um terreno retangular e calcula sua área em metros quadrados.
 
 ## 🧮 Fórmula utilizada
 
-```
-
-área = frente × laterais
-
-````
+  área = frente × laterais
 
 ## 📂 Estrutura do código
 
-```c
+
 float frente, laterais, area;
 area = frente * laterais;
-````
+
 
 ## 🖥️ Exemplo de uso
 
-```
+
 Informe a medida da frente do terreno em metros: 10
 Informe o a medida das laterais do terreno em metros: 25
 A medida da area do terreno, em metros, e de: 250.000000
-```
+
 
 ## 🧠 Observações
 
