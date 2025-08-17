@@ -32,4 +32,4 @@ Cada subpasta representa um projeto individual, com seus arquivos, README e inst
 
 ---
 
-> 📅 Repositório criado por André como parte do diário de evolução em Sistemas de Informação.
+> 📅 Repositório criado por mim como parte do diário de evolução em Sistemas de Informação.
