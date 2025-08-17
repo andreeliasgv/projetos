@@ -1,9 +1,9 @@
-```markdown
 # 🔢 Encontrar o Maior Número em Java
 
 Este programa em Java permite ao usuário inserir quantos números desejar e,
 ao final, exibe qual foi o maior número informado.
 
+```markdown
 ## 📌 Funcionalidades
 
 - Permite múltiplas entradas numéricas
@@ -44,24 +44,7 @@ Deseja informar outro numero?
 0
 O maior numero foi: 25
 
-````
-
-## ▶️ Como executar
-
-1. Compile o código:
-   ```bash
-   javac Maior.java
-   
-
-2. Execute:
-
-   ```bash
-   java Maior
-   ```
-
-> ⚠️ Requisitos: Java JDK instalado (`java -version`)
-
-
+```
 ## 📄 Licença
 
 Este projeto está sob a [Licença MIT](../LICENSE).
