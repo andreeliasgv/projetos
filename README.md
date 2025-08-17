@@ -1,6 +1,6 @@
 # 🧪 Projetos Iniciais
 
-Este repositório reúne meus primeiros projetos desenvolvidos durante o aprendizado de programação. Cada projeto tem como objetivo fixar os fundamentos de uma linguagem ou conceito, com foco em lógica, estrutura e boas práticas iniciais.
+Este repositório reúne meus projetos desenvolvidos durante o aprendizado de programação. Cada projeto tem como objetivo fixar os fundamentos de uma linguagem ou conceito, com foco em lógica, estrutura e boas práticas iniciais.
 
 ## 🚀 Linguagens e Tecnologias Utilizadas
 
