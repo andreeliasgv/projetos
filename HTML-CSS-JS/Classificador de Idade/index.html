@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Frete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        p {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Classificador de Idade</h1>
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" placeholder="Digite a idade" required>
+        <button onclick="classificarIdade()">Classificar Idade</button>
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function classificarIdade() {
+            const idade = parseFloat(document.getElementById('idade').value);
+            const resultado = document.getElementById('resultado');
+
+            if (isNaN(idade) || idade < 0) {
+                resultado.textContent = "Por favor, digite uma idade válida!";
+                resultado.style.color = "red";
+                return;
+            }
+
+            if (idade >= 0 && idade <= 12) {
+                resultado.textContent = "Infantil";
+                resultado.style.color = "cyan";
+            } else if (idade >= 13 && idade <= 17) {
+                resultado.textContent = "Adolescente";
+                resultado.style.color = "blue";
+            } else if (idade >= 18 && idade <= 59) {
+                resultado.textContent = "Adulto";
+                resultado.style.color = "black";
+            } else if (idade >= 60) {
+                resultado.textContent = "Idoso";
+                resultado.style.color = "brown";
+            }
+        }
+    </script>
+</body>
+</html>
