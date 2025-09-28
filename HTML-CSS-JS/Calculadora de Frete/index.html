@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Frete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        p {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        select {
+            padding: 10px;
+            width: 87%;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Frete</h1>
+        <label for="valorCompra">Valor da Compra (R$):</label>
+        <input type="number" id="valorCompra" placeholder="Digite o valor da compra">
+        <br/>
+        <label for="regiao">Região:</label>
+        <select name="regiao" id="regiao" required>
+            <option value="">Escolha uma opção</option>
+            <option value="norte">Norte</option>
+            <option value="sul">Sul</option>
+            <option value="sudeste">Sudeste</option>
+        </select>
+        <br/>
+        <button onclick="calcularFrete()">Calcular Frete</button>
+        <p id="resultado"></p>
+    </div>
+    <script>
+        function calcularFrete() {
+            const valorCompra = parseFloat(document.getElementById('valorCompra').value);
+            const resultado = document.getElementById('resultado');
+            const regiaoSelecionada = document.getElementById("regiao").value;
+
+            if (isNaN(valorCompra) || valorCompra <= 0) {
+                resultado.textContent = "Por favor, digite um valor válido.";
+                resultado.style.color = "red";
+                return;
+            }
+            if (!regiaoSelecionada) {
+                resultado.textContent = "Por favor, selecione a região de entrega.";
+                resultado.style.color = "red";
+                return;
+            }
+
+            let frete;
+
+            if (regiaoSelecionada === "norte") {
+                if (valorCompra > 100) {
+                    frete = 0;
+                    resultado.textContent = `Parabéns! O frete é grátis. Total: R$${valorCompra.toFixed(2)}`;
+                    resultado.style.color = "green";
+                } else {
+                    frete = 20;
+                    const total = valorCompra + frete;
+                    resultado.textContent = `O valor do frete é R$${frete.toFixed(2)}. Total: R$${total.toFixed(2)}`;
+                    resultado.style.color = "blue";
+                }
+            }
+
+            if (regiaoSelecionada === "sul") {
+                if (valorCompra < 80) {
+                    frete = 15;
+                    const total = valorCompra + frete;
+                    resultado.textContent = `O valor do frete é R$${frete.toFixed(2)}. Total: R$${total.toFixed(2)}`;
+                    resultado.style.color = "blue";
+                } else {
+                    frete = 0;
+                    resultado.textContent = `Parabéns! O frete é grátis. Total: R$${valorCompra.toFixed(2)}`;
+                    resultado.style.color = "green";
+                }
+            }
+
+            if (regiaoSelecionada === "sudeste") {
+                if (valorCompra < 50) {
+                    frete = 10;
+                    const total = valorCompra + frete;
+                    resultado.textContent = `O valor do frete é R$${frete.toFixed(2)}. Total: R$${total.toFixed(2)}`;
+                    resultado.style.color = "blue";
+                } else {
+                    frete = 0;
+                    resultado.textContent = `Parabéns! O frete é grátis. Total: R$${valorCompra.toFixed(2)}`;
+                    resultado.style.color = "green";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
