@@ -1,4 +1,7 @@
+import java.util.Objects;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 class Biblioteca {
     private Integer idEmprestimo;
@@ -75,17 +78,42 @@ class Biblioteca {
         this.valorMultaPagar = valorMultaPagar;
     }
     
-    public Double printValorMultaPagar() {
-        return this.valorMultaPagar = this.nroDiasAtraso*this.valorMultaDia;
+    public void calcularValorMultaPagar() {
+        this.valorMultaPagar = this.nroDiasAtraso*this.valorMultaDia;
     }
-    
-    public String printBiblioteca() {
-        return "ID do Emprestimo: " + this.idEmprestimo +
+
+    @Override
+    public String toString() {
+        return "\nID do Emprestimo: " + this.idEmprestimo +
                 "\n Nome do Aluno: " + this.nomeAluno +
                 "\n Nome do Livro: " + this.nomeLivro +
                 "\n Valor da Multa Diaria R$: " + this.valorMultaDia +
                 "\n Dias em atraso: " + this.nroDiasAtraso +
-                "\n\n Multa Total a pagar: R$";
+                "\n Multa Total a pagar: R$" + this.valorMultaPagar;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 73 * hash + Objects.hashCode(this.idEmprestimo);
+        hash = 73 * hash + Objects.hashCode(this.nomeAluno);
+        hash = 73 * hash + Objects.hashCode(this.valorMultaPagar);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Biblioteca other = (Biblioteca) obj;
+        return Objects.equals(this.idEmprestimo, other.idEmprestimo);
     }
 }
 
@@ -93,23 +121,38 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
+        int cont = 0, continuar =1;
         
-        Biblioteca biblioteca = new Biblioteca();
-        System.out.println("Informe o ID do emprestimo: ");
-        biblioteca.setIdEmprestimo(scanner.nextInt());
-        System.out.println("Informe o nome do Aluno: ");
-        scanner.nextLine();
-        biblioteca.setNomeAluno(scanner.nextLine());
-        System.out.println("Informe o nome do Livro: ");
-        biblioteca.setNomeLivro(scanner.nextLine());
-        System.out.println("Informe o valor da multa diária: ");
-        biblioteca.setValorMultaDia(scanner.nextDouble());
-        System.out.println("Informe o numero de dias em atraso: ");
-        biblioteca.setNroDiasAtraso(scanner.nextDouble());
+        List<Biblioteca> emprestimos = new ArrayList<>();
         
-        System.out.println();
+        while (continuar==1) {
+            Biblioteca emprestimo = new Biblioteca();
+            cont++;
+            System.out.println("\nCadastro de Emprestimo");
+            emprestimo.setIdEmprestimo(cont);
+            System.out.print("\nAluno: ");
+            emprestimo.setNomeAluno(scanner.nextLine());
+            System.out.print("\nNome do Livro: ");
+            emprestimo.setNomeLivro(scanner.nextLine());
+            System.out.print("\nValor da multa diaria: ");
+            emprestimo.setValorMultaDia(scanner.nextDouble());
+            System.out.print("\nDias em atraso: ");
+            emprestimo.setNroDiasAtraso(scanner.nextDouble());
+            emprestimo.calcularValorMultaPagar();
+            emprestimos.add(emprestimo);
+            
+            System.out.println("Deseja cadastrar outro emprestimo?");
+            System.out.println("1-Sim");
+            System.out.println("2-Nao");
+            continuar = scanner.nextInt();
+            scanner.nextLine();
+        }
         
-        System.out.println(biblioteca.printBiblioteca());
-        System.out.println(biblioteca.printValorMultaPagar());  
+        for (Biblioteca emprestimo : emprestimos) {
+            System.out.println(emprestimo.toString());
+        }
+        
+        scanner.close();
+        
     }
 }
