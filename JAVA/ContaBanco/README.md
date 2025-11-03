@@ -1,18 +1,66 @@
-## Getting Started
+# 💳 ContaTerminal
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto é uma aplicação simples em Java que simula a criação de uma conta bancária via terminal. O usuário é guiado por prompts para inserir os dados da conta e, ao final, recebe uma mensagem personalizada com as informações fornecidas.
 
-## Folder Structure
+## 🚀 Objetivo
 
-The workspace contains two folders by default, where:
+O objetivo principal é praticar os conceitos básicos de entrada de dados com `Scanner`, manipulação de variáveis e saída formatada no terminal.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 🧠 Funcionalidades
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- Solicita ao usuário:
+  - Número da agência
+  - Número da conta
+  - Nome do cliente
+  - Saldo inicial
+- Exibe uma mensagem de boas-vindas com os dados informados
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 📦 Requisitos
 
-## Dependency Management
+- Java JDK 8 ou superior
+- Terminal ou IDE compatível com Java
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## ▶️ Como executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/ContaTerminal.git
+   ```
+2. Compile o código:
+   ```bash
+   javac ContaTerminal.java
+   ```
+3. Execute o programa:
+   ```bash
+   java ContaTerminal
+   ```
+
+## 🧾 Exemplo de saída
+
+```
+Por favor, digite o número da agência:
+1234
+Por favor, digite o número da conta:
+56789
+Por favor, digite o nome do cliente:
+João Silva
+Por favor, digite o saldo da conta:
+1500.75
+
+Olá João Silva, obrigado por criar uma conta em nosso banco, sua agência é 1234, conta 56789 e seu saldo (R$1500.75) já está disponível para saque.
+```
+
+## 📚 Aprendizados
+
+Este projeto reforça:
+- Uso da classe `Scanner` para entrada de dados
+- Manipulação de tipos primitivos (`int`, `double`, `String`)
+- Boas práticas de fechamento de recursos (`scanner.close()`)
+
+## 🛠️ Autor
+
+Desenvolvido por [André Elias](https://github.com/andreeliasgv) como parte dos estudos de Java.
+
+---
+
+📌 Sinta-se à vontade para contribuir ou sugerir melhorias!
