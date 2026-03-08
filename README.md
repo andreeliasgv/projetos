@@ -7,6 +7,7 @@ Este repositório reúne meus projetos desenvolvidos durante o aprendizado de pr
 - ✅ Java
 - ✅ C
 - ✅ HTML5, CSS3 e JavaScript
+- ✅ PostgreSQL
 
 ## 📁 Estrutura do Repositório
 
@@ -15,7 +16,7 @@ Cada subpasta representa um projeto individual, com seus arquivos, README e inst
 
 ## 🧠 Objetivos
 
-- Praticar lógica de programação com projetos simples
+- Praticar programação com projetos simples
 - Aprender a estruturar pequenos programas com clareza
 - Evoluir para projetos mais complexos com o tempo
 
