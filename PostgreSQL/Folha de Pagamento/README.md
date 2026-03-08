@@ -1,4 +1,3 @@
-```markdown
 # 💰 FOLHA-PAGAMENTO — Banco de Dados PostgreSQL
 
 Este projeto apresenta a modelagem e implementação de um banco de dados relacional para um sistema simples de **Folha de Pagamento**, utilizando **PostgreSQL**.
@@ -165,5 +164,3 @@ Algumas evoluções que podem ser implementadas:
 # 👨‍💻 Autor
 
 Projeto acadêmico desenvolvido para estudo de **modelagem e manipulação de banco de dados relacionais** utilizando PostgreSQL.
-
-```
