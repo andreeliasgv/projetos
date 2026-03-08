@@ -1,4 +1,3 @@
-```markdown
 # 🐾 PETSHOP — Banco de Dados PostgreSQL
 
 Este projeto apresenta a modelagem e implementação de um banco de dados relacional para gerenciamento de um **Pet Shop**, utilizando **PostgreSQL**.
@@ -170,6 +169,3 @@ Algumas melhorias que podem ser implementadas:
 # 👨‍💻 Autor
 
 Projeto acadêmico para estudo de **modelagem e implementação de banco de dados relacionais** utilizando PostgreSQL.
-
-```
-```
