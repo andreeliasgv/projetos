@@ -53,7 +53,8 @@ public class Main {
                     break;
                     
                 case 5:
-                    System.out.println("\nInforme a tag:\n> ");
+                    System.out.print("\nInforme a tag:\n> ");
+                    scanner.nextLine();
                     service.listarPorTag(scanner.nextLine());
                     break;
                 case 6:
