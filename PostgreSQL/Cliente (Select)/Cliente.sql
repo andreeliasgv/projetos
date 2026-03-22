@@ -1,0 +1,36 @@
+CREATE TABLE CLIENTE (
+	COD_CLIENTE INTEGER NOT NULL,
+	NOME_CLIENTE VARCHAR(50) NOT NULL,
+	TELEFONE_CLIENTE VARCHAR(11),
+	CIDADE_CLIENTE VARCHAR(50),
+	CONSTRAINT PK_CLIENTE PRIMARY KEY (COD_CLIENTE)
+);
+
+INSERT INTO CLIENTE VALUES
+	(1, 'João', '12996478374', 'SÃO PAULO'),
+	(2, 'Maria', '11995436554', 'FLORIANÓPOLIS'),
+	(3, 'Pedro', '6799655678', 'RONDONÓPOLIS');
+
+/*
+
+3. Consultas básicas com SELECT
+Na tabela CLIENTE, monte consultas para:
+
+listar todos os registros e todas as colunas;
+listar apenas Cod_Cliente, Nome_Cliente e Cidade_Cliente;
+listar os clientes da cidade de São Paulo;
+listar os clientes de São Paulo em ordem alfabética pelo nome.
+
+*/
+
+SELECT * FROM CLIENTE;
+
+SELECT COD_CLIENTE, NOME_CLIENTE, CIDADE_CLIENTE FROM CLIENTE;
+
+SELECT * FROM CLIENTE WHERE CIDADE_CLIENTE = 'SÃO PAULO';
+
+-- (ADICIONANDO MAIS UM DE SÃO PAULO)
+INSERT INTO CLIENTE VALUES
+	(4, 'Antônio', '45994658392', 'SÃO PAULO');
+
+SELECT * FROM CLIENTE WHERE CIDADE_CLIENTE = 'SÃO PAULO' ORDER BY NOME_CLIENTE ASC;

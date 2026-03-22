@@ -1,0 +1,43 @@
+CREATE TABLE DEPARTAMENTO (
+	COD_DEP INTEGER NOT NULL,
+	NOME VARCHAR(50),
+	CONSTRAINT PK_COD_DEP PRIMARY KEY (COD_DEP)
+);
+
+CREATE TABLE FUNCIONARIO (
+	CPF VARCHAR(11) NOT NULL,
+	NOME VARCHAR (50),
+	CIDADE VARCHAR (50),
+	COD_DEP INTEGER,
+	CONSTRAINT PK_CPF PRIMARY KEY (CPF),
+	CONSTRAINT FK_COD_DEP FOREIGN KEY (COD_DEP) REFERENCES DEPARTAMENTO (COD_DEP)
+);
+
+INSERT INTO DEPARTAMENTO VALUES
+	(1, 'ALMOXARIFADO'),
+	(2, 'VENDAS'),
+	(3, 'MARKETING'),
+	(4, 'FATURAMENTO');
+
+/*
+
+2. Inserção, atualização e exclusão de dados
+A partir da tabela FUNCIONARIO, faça:
+
+3 comandos INSERT com dados diferentes;
+1 comando UPDATE para alterar o departamento de um funcionário específico;
+1 comando DELETE para remover um registro pelo CPF.
+
+*/
+
+INSERT INTO FUNCIONARIO VALUES
+	('12345678900', 'José Augusto', 'Florianópolis', 1),
+	('09876543211', 'Antônio Fernandes', 'São Paulo', 2),
+	('45612378901', 'Maria Helena', 'Rio de Janeiro', 3);
+
+UPDATE FUNCIONARIO
+SET COD_DEP = 4 WHERE CPF = '12345678900';
+
+DELETE FROM FUNCIONARIO WHERE CPF = '45612378901';
+
+SELECT * FROM FUNCIONARIO;
